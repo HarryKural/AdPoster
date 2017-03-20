@@ -10,6 +10,15 @@ var users = require('./routes/users');
 
 var app = express();
 
+// use mongoose to connect to mongodb
+let mongoose = require('mongoose');
+let conn = mongoose.connection;
+
+// link to config file
+let globals = require('./config/globals');
+
+conn.open(globals.db);
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -27,7 +36,7 @@ app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
+  let err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
