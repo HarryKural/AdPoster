@@ -10,20 +10,17 @@ Description:
 <html lang="en">
 <head>
   <title><%= title %></title>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
   <!-- Adding Bootstrap -->
-  <!-- Latest compiled and minified CSS -->
   <!-- Bootstrap for css -->
   <link rel="stylesheet" href="/stylesheets/bootstrap.min.css" />
   <!-- Optional theme -->
   <link rel="stylesheet" href="/stylesheets/bootstrap-theme.min.css" />
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
   <link rel="stylesheet" href="/stylesheets/main.css" />
-  <link rel="stylesheet" href="/stylesheets/css/ie9.css" />
+  <link rel="stylesheet" href="/stylesheets/ie9.css" />
   <noscript><link rel="stylesheet" href="/stylesheets/noscript.css" /></noscript>
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
@@ -35,7 +32,7 @@ Description:
   <!-- Header -->
   <header id="header">
     <div class="logo">
-      <span class="icon fa-buysellads" aria-hidden="true"></span>
+      <a href="/"><span class="icon fa-buysellads" aria-hidden="true"></span></a>
     </div>
     <div class="content">
       <div class="inner">
@@ -43,5 +40,15 @@ Description:
         <p><!--[-->This classified ad website allows you to buy, sell any product. <!--]--><br /></p>
       </div>
     </div>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/buy">Buy</a></li>
+        <li><a href="/sell">Sell</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+
 
   </header>
