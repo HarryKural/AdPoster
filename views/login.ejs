@@ -1,0 +1,51 @@
+<% include partials/header.ejs %>
+
+<main class="container">
+    <h1>Login</h1>
+
+    <% if (messages.length > 0) { %>
+        <div class="alert alert-danger"><%= messages %></div>
+    <% }
+    else { %>
+        <div class="alert alert-info">Please enter your Credentials</div>
+    <% } %>
+    <form method="post">
+        <div class="form-group">
+            <label for="username" class="col-sm-2 control-label">Email: *</label>
+            <input name="username" id="username" required />
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-2 control-label">Password: *</label>
+            <input name="password" id="password" type="password" required />
+        </div>
+
+        <div class="row">
+        <div class="col-sm-3">
+            <button class="btn btn-block btn-success fa fa-envelope">
+                <span class="fa fa-success"></span> Sign in with Email
+            </button>
+        </div>
+        </div>
+        <br />
+        <div class="row">
+        <div class="col-sm-3">
+            <a href="/facebook" class="btn btn-block btn-social btn-facebook">
+                <span class="fa fa-facebook"></span> Sign in with Facebook
+            </a>
+        </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-sm-3">
+                <a href="/google" class="btn btn-block btn-social btn-google">
+                    <span class="fa fa-google"></span> Sign in with Google
+                </a>
+            </div>
+        </div>
+        <hr />
+        Need access?  <a href="/register" title="Register">Register</a>
+    </form>
+
+</main>
+
+<% include partials/footer.ejs %>

@@ -16,9 +16,10 @@ Description:
   <link rel="stylesheet" href="/stylesheets/bootstrap.min.css" />
   <!-- Optional theme -->
   <link rel="stylesheet" href="/stylesheets/bootstrap-theme.min.css" />
+  <!--[if lte IE 8]><script src="/javascripts/ie/html5shiv.js"></script><![endif]-->
   <link rel="stylesheet" href="/stylesheets/main.css" />
-  <link rel="stylesheet" href="/stylesheets/ie9.css" />
-  <noscript><link rel="stylesheet" href="/stylesheets/noscript.css" /></noscript>
+  <!--[if lte IE 9]><link rel="stylesheet" href="/stylesheets/css/ie9.css" /><![endif]-->
+  <!--[if lte IE 8]><link rel="stylesheet" href="/stylesheets/ie8.css" /><![endif]-->
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
@@ -26,24 +27,109 @@ Description:
 <!-- Wrapper -->
 <div id="wrapper">
 
-  <!-- Header -->
-  <header id="header">
-    <div class="logo">
-      <a href="/"><span class="icon fa-buysellads" aria-hidden="true"></span></a>
+  <!-- Main -->
+  <div id="main">
+    <div class="inner">
+
+      <!-- Header -->
+      <header id="header">
+        <a href="/" class="logo"><strong>AdPoster</strong> By Harshit Sharma</a>
+        <ul class="icons">
+          <li><a href="https://github.com/HarryKural" class="icon fa-github"><span class="label">Github</span></a></li>
+          <li><a href="https://ca.linkedin.com/in/harrykural" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+          <li><a href="mailto:200333254@student.georgianc.on.ca" class="icon fa-envelope"><span class="label">Email</span></a></li>
+        </ul>
+      </header>
+
+      <!-- Banner -->
+      <section id="banner">
+        <div class="content">
+          <span class="icon fa-buysellads fa-5x"></span>
+          <header>
+            <h1>AdPoster</h1>
+            <p>A classified ad website which allows you to buy, sell any product.</p>
+          </header>
+        </div>
+      </section>
+
+      <!-- Section -->
+      <section>
+        <header class="major">
+          <h2>Find out anything</h2>
+        </header>
+        <div class="features">
+          <article>
+            <span class="icon fa-mobile"></span>
+            <div class="content">
+              <h3>Mobile</h3>
+            </div>
+          </article>
+          <article>
+            <span class="icon fa-laptop"></span>
+            <div class="content">
+              <h3>Electronics & Appliances</h3>
+              </div>
+          </article>
+          <article>
+            <span class="icon fa-car"></span>
+            <div class="content">
+              <h3>Cars</h3>
+            </div>
+          </article>
+          <article>
+            <span class="icon fa-motorcycle"></span>
+            <div class="content">
+              <h3>Bikes</h3>
+            </div>
+          </article>
+          <article>
+            <span class="icon fa-home"></span>
+            <div class="content">
+              <h3>Real Estate</h3>
+            </div>
+          </article>
+          <article>
+            <span class="icon fa-briefcase"></span>
+            <div class="content">
+              <h3>Jobs & Services</h3>
+            </div>
+          </article>
+          <article>
+            <span class="icon fa-paw"></span>
+            <div class="content">
+              <h3>Pets</h3>
+            </div>
+          </article>
+          <article>
+            <span class="icon fa-shirtsinbulk"></span>
+            <div class="content">
+              <h3>Fashion</h3>
+            </div>
+          </article>
+        </div>
+      </section>
     </div>
-    <div class="content">
-      <div class="inner">
-        <h1>AdPoster</h1>
-        <p><!--[-->This classified ad website allows you to buy, sell any product. <!--]--><br /></p>
-      </div>
+  </div>
+
+  <!-- Sidebar -->
+  <div id="sidebar">
+    <div class="inner">
+
+      <!-- Menu -->
+      <nav id="menu">
+        <header class="major">
+          <h2>Menu</h2>
+        </header>
+        <ul>
+          <li><a href="/">Homepage</a></li>
+          <li><a href="">Buy</a></li>
+          <li><a href="">Sell</a></li>
+          <li><a href="/">Login</a></li>
+          <li><a href="/">Register</a></li>
+        </ul>
+      </nav>
+
     </div>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/buy">Buy</a></li>
-        <li><a href="/sell">Sell</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  </div>
+
+</div>
