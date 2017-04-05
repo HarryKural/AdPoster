@@ -1,0 +1,91 @@
+/* ---------- Divide NavBar and main page content ----------- */
+header, main, footer {
+    padding-left: 300px;
+}
+
+@media only screen and (max-width : 992px) {
+    header, main, footer {
+        padding-left: 0;
+    }
+}
+
+/* ---------- Buttons ------------- */
+.waves-effect.waves-green {
+    /* The alpha value allows the text and background color
+    of the button to still show through. */
+    background-color: whitesmoke;
+    color: forestgreen;
+}
+
+.waves-effect.waves-red {
+    /* The alpha value allows the text and background color
+    of the button to still show through. */
+    background-color: whitesmoke;
+    color: red;
+}
+
+.waves-effect.waves-blue {
+    color: #01579b;
+}
+
+/* ----------- HEADINGS ----------------- */
+blockquote {
+    color: #01579b;
+    border-left-color: #01579b;
+}
+
+/* ----------- ICONS AND TEXT ---------- */
+#adp, #fa {
+    color: #01579b;
+}
+
+/** ---------------- FORM ----------- **/
+/* label color */
+.input-field label {
+    color: #01579b;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+    color: #01579b;
+}
+.input-field input[type=email]:focus + label {
+    color: #01579b;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #01579b;
+    box-shadow: 0 1px 0 0 #01579b;
+}
+.input-field input[type=email]:focus {
+    border-bottom: 1px solid #01579b;
+    box-shadow: 0 1px 0 0 #01579b;
+}
+.input-field textarea[type=text]:focus {
+    border-bottom: 1px solid #01579b;
+    box-shadow: 0 1px 0 0 #01579b;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+    color: #01579b;
+}
+
+/*!* Position and style the close button (top right corner) *!*/
+/*.side-nav .closebtn {*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*right: 25px;*/
+    /*font-size: 36px;*/
+    /*margin-left: 50px;*/
+/*}*/
+
+/*!* Style page content - use this if you want to push the page content to the right when you open the side navigation *!*/
+/*#main {*/
+    /*transition: margin-left .5s;*/
+    /*padding: 20px;*/
+/*}*/
+
+/*!* On smaller screens, where height is less than 450px, change the style of the side-nav (less padding and a smaller font size) *!*/
+/*@media screen and (max-height: 450px) {*/
+    /*.side-nav {padding-top: 15px;}*/
+    /*.side-nav a {font-size: 18px;}*/
+/*}*/

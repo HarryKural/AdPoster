@@ -1,25 +1,43 @@
 <% include ./partials/header.ejs %>
 
+<div class="main">
+<div class="row">
+    <blockquote>Contact Us</blockquote>
 <article id="contact">
-    <h2 class="major">Contact</h2>
-    <form method="post" action="#">
-        <div class="field half first">
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" />
+    <form method="post" class="col s12" action="#">
+        <div class="row">
+                    <div class="input-field col s12 l6 m6">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="name" name="name" type="text" class="validate" />
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="input-field col s12 l6 m6">
+                        <i class="material-icons prefix">email</i>
+                        <input id="email" name="email" type="email" class="validate" />
+                        <label for="email" data-error="please enter valid email" data-success="perfect!">Email</label>
+                    </div>
+         </div>
+        <div class="row">
+                <div class="input-field col s12">
+                        <i class="material-icons prefix">mode_edit</i>
+                        <textarea id="message" name="message" type="text" class="materialize-textarea"></textarea>
+                        <label for="message">Message</label>
+                </div>
         </div>
-        <div class="field half">
-            <label for="email">Email</label>
-            <input type="text" name="email" id="email" />
+        <div class="row">
+            <div class="col s6">
+                <button class="btn waves-effect waves-green" type="submit" name="action">Submit
+                    <i class="material-icons left">send</i>
+                </button>
+            </div>
+            <div class="col s6">
+            <button class="btn waves-effect waves-red" type="reset" name="action">Reset
+                <i class="material-icons left">delete_sweep</i>
+            </button>
+            </div>
         </div>
-        <div class="field">
-            <label for="message">Message</label>
-            <textarea name="message" id="message" rows="4"></textarea>
-        </div>
-        <ul class="actions">
-            <li><input type="submit" value="Send Message" class="special" /></li>
-            <li><input type="reset" value="Reset" /></li>
-        </ul>
     </form>
 </article>
-
+</div>
+</div>
 <% include ./partials/footer.ejs %>
