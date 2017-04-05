@@ -9,6 +9,14 @@ header, main, footer {
     }
 }
 
+/* ----------- HR ----------------- */
+hr.style10 {
+    border-color: #EEEEEE;
+    border-style: solid none;
+    border-width: 1px 0;
+    margin: 18px 0;
+}
+
 /* ---------- Buttons ------------- */
 .waves-effect.waves-green {
     /* The alpha value allows the text and background color
@@ -51,12 +59,20 @@ blockquote {
 .input-field input[type=email]:focus + label {
     color: #01579b;
 }
+.input-field input[type=password]:focus + label {
+    color: #01579b;
+}
+
 /* label underline focus color */
 .input-field input[type=text]:focus {
     border-bottom: 1px solid #01579b;
     box-shadow: 0 1px 0 0 #01579b;
 }
 .input-field input[type=email]:focus {
+    border-bottom: 1px solid #01579b;
+    box-shadow: 0 1px 0 0 #01579b;
+}
+.input-field input[type=password]:focus {
     border-bottom: 1px solid #01579b;
     box-shadow: 0 1px 0 0 #01579b;
 }

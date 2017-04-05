@@ -20,3 +20,30 @@ $('#message').trigger('autoresize');
 //     document.getElementById("mySidenav").style.width = "0";
 //     document.getElementById("main").style.marginLeft = "0";
 // }
+
+// ---------------- Show Password Functionality ---------------------
+(function ($) {
+    $.toggleShowPassword = function (options) {
+        var settings = $.extend({
+            field: "#password",
+            control: "#toggle_show_password",
+        }, options);
+
+        var control = $(settings.control);
+        var field = $(settings.field);
+
+        control.bind('click', function () {
+            if (control.is(':checked')) {
+                field.attr('type', 'text');
+            } else {
+                field.attr('type', 'password');
+            }
+        })
+    };
+}(jQuery));
+
+$.toggleShowPassword({
+    field: '#password',
+    control: '#showPass'
+});
+
