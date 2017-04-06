@@ -4,23 +4,23 @@
     <blockquote>Contact Us</blockquote>
 <div class="container-fluid">
 <article id="contact">
-    <form method="post" class="col s12" action="#">
+    <form id="myForm" method="post" class="col s12">
         <div class="row">
                     <div class="input-field col s12 l6 m6">
                         <i class="material-icons prefix">account_circle</i>
-                        <input id="name" name="name" type="text" class="validate" />
+                        <input id="name" name="name" type="text" class="validate" required />
                         <label for="name">Name</label>
                     </div>
                     <div class="input-field col s12 l6 m6">
                         <i class="material-icons prefix">email</i>
-                        <input id="email" name="email" type="email" class="validate" />
+                        <input id="email" name="email" type="email" class="validate" required />
                         <label for="email" data-error="please enter valid email" data-success="perfect!">Email</label>
                     </div>
          </div>
         <div class="row">
                 <div class="input-field col s12">
                         <i class="material-icons prefix">mode_edit</i>
-                        <textarea id="message" name="message" type="text" class="materialize-textarea"></textarea>
+                        <textarea id="message" name="message" type="text" class="materialize-textarea" required></textarea>
                         <label for="message">Message</label>
                 </div>
         </div>

@@ -34,6 +34,33 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 
+// mailgun -----------------   contact page ------------------
+app.post("/contact",function(req,res){
+
+    let api_key = 'key-cea2f6217622326ba8270360ecabe20a';
+    let domain = 'sandbox220cf30c51264734934e840e00a1535b.mailgun.org';
+    let mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
+
+    let data = {
+        from: req.body.email,
+        to: 'bsp42333@gmail.com',
+        subject: req.body.name + " Sent you a message",
+        html: "<b>Message: </b>"+req.body.message
+    };
+
+    mailgun.messages().send(data, function (error, body) {
+        console.log(body);
+        if (!error)
+        {
+            res.render('contact', {title: 'Contact', msg: 'Message sent! Thank you.', err: false, page: 'contact'});
+        }
+        else
+        {
+            res.render('contact', {title: 'Contact', msg: 'Error occured, message not sent.', err: true, page: 'contact'});
+        }
+    });
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   let err = new Error('Not Found');

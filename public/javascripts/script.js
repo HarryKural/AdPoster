@@ -46,4 +46,3 @@ $.toggleShowPassword({
     field: '#password',
     control: '#showPass'
 });
-
