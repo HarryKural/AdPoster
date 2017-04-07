@@ -3,7 +3,7 @@
 <blockquote>Browse Ads</blockquote>
 
 <% if (user) { %>
-<a href="/ads/add">Add a New Ad</a>
+<a href="/ads/add">Add a New Advertisement</a>
 <% } %>
 
 <table class="responsive-table highlight">
@@ -23,8 +23,8 @@
         <td><%= ads[i].price %></td>
         <% if (user) { %>
         <td>
-            <a href="/ads/<%= ads[i]._id %>" class="btn btn-info">Edit</a>
-            <a href="/ads/delete/<%= ads[i]._id %>" class="btn btn-danger confirmation">Delete</a>
+            <a href="/ads/<%= ads[i]._id %>" class="btn waves-effect waves-orange">Edit<i class="material-icons left">edit</i></a>
+            <a href="/ads/delete/<%= ads[i]._id %>" class="btn waves-effect waves-red confirmation">Delete<i class="material-icons left">delete</i></a>
         </td>
         <% } %>
     </tr>

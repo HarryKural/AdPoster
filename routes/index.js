@@ -64,7 +64,7 @@ router.post('/register', function(req, res, next)
     Account.register(new Account({ username: req.body.username }), req.body.password, function(err, account) {
         if (err) {
             console.log(err);
-            res.render('error', { title: 'Create Account Error' , err: err});
+            res.render('error', { title: 'Create Account Error'});
         }
         res.redirect('/login');
     });

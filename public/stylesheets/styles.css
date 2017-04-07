@@ -25,6 +25,13 @@ hr.style10 {
     color: forestgreen;
 }
 
+.waves-effect.waves-orange {
+    /* The alpha value allows the text and background color
+    of the button to still show through. */
+    background-color: whitesmoke;
+    color: darkorange;
+}
+
 .waves-effect.waves-red {
     /* The alpha value allows the text and background color
     of the button to still show through. */
