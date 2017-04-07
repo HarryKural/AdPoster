@@ -1,25 +1,27 @@
 <% include ../partials/header.ejs %>
 
-<main class="container">
-
-    <h1>Ad Details</h1>
+<blockquote>Ad Details</blockquote>
+<div class="container">
 
     <form method="post">
-        <div class="form-group">
-            <label for="title" class="col-sm-2 control-label">Title: *</label>
-            <input name="title" id="title" required />
+        <div class="input-field col s12 l6 m6">
+            <i class="fa fa-header" aria-hidden="true"></i>
+            <input id="title" name="title" required />
+            <label for="title" id="title">Title</label>
         </div>
-        <div class="form-group">
-            <label for="description" class="col-sm-2 control-label">Description: *</label>
-            <input name="description" id="description" required />
+        <div class="input-field col s12 l6 m6">
+            <i class="fa fa-header" aria-hidden="true"></i>
+            <input id="description" name="description" required />
+            <label for="description" id="description">Description</label>
         </div>
-        <div class="form-group">
-            <label for="price" class="col-sm-2 control-label">Price:</label>
-            <input name="price" id="price" min="0.01" type="number" step="any"  />
+        <div class="input-field col s12 l6 m6">
+            <i class="fa fa-header" aria-hidden="true"></i>
+            <input name="price" id="price" min="0.01" type="number" step="any" />
+            <label for="price" id="price">Price</label>
         </div>
         <button class="btn btn-success col-sm-offset-2">Save</button>
     </form>
 
-</main>
+</div>
 
 <% include ../partials/footer.ejs %>

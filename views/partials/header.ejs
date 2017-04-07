@@ -21,19 +21,23 @@ Description:
   <script src="https://use.fontawesome.com/016edaecae.js"></script>
 </head>
 <body>
-<div id="mySidenav">
+<li id="mySidenav">
 <ul id="slide-out" class="side-nav fixed">
   <li><div class="userView">
       <i id="adp" class="fa fa-buysellads fa-fw fa-3x" aria-hidden="true">dPoster</i>
     </div></li>
-  <!--<li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>-->
   <li><a class="waves-effect waves-blue" href="/"><i id="fa" class="fa fa-home fa-fw fa-lg" aria-hidden="true"></i>Home</a></li>
   <li><a class="waves-effect waves-blue" href="/ads"><i id="fa" class="fa fa-list-alt fa-fw fa-lg" aria-hidden="true"></i>Browse Ads</a></li>
   <li><a class="waves-effect waves-blue" href="/about"><i id="fa" class="fa fa-info-circle fa-fw fa-lg" aria-hidden="true"></i>About Us</a></li>
   <li><a class="waves-effect waves-blue" href="/contact"><i id="fa" class="fa fa-user fa-fw fa-lg" aria-hidden="true"></i>Contact Us</a></li>
+    <% if (!user) { %>
   <li><a class="waves-effect waves-blue" href="/register"><i id="fa" class="fa fa-user-plus fa-fw fa-lg" aria-hidden="true"></i>Register</a></li>
   <li><a class="waves-effect waves-blue" href="/login"><i id="fa" class="fa fa-sign-in fa-fw fa-lg" aria-hidden="true"></i>Login</a></li>
+    <% }
+    else { %>
   <li><a class="waves-effect waves-blue" href="/logout"><i id="fa" class="fa fa-sign-out fa-fw fa-lg" aria-hidden="true"></i>Logout</a></li>
+  <li><blockquote><%= user.username %></blockquote></li>
+    <% } %>
 </ul>
 <a id="navbtn" href="#" data-activates="slide-out" class="button-collapse show-on-large btn-floating btn-large light-blue darken-4"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></a>
 </div>

@@ -10,7 +10,7 @@ let adSchema = new mongoose.Schema({
         type: String,
         required: 'Title is required'
     },
-    author: {
+    description: {
         type: String,
         required: 'Description is required'
     },

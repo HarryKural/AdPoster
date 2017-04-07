@@ -1,13 +1,12 @@
 <% include partials/header.ejs %>
 
-
 <blockquote>Register</blockquote>
 <div class="container">
     <form method="post">
         <div class="row">
             <div class="input-field col s12 l12 m12">
                 <i class="fa fa-envelope prefix"></i>
-                <input id="username" name="email" required type="email" class="validate" />
+                <input id="username" name="username" required type="email" class="validate" />
                 <label for="username" id="username" data-error="please enter valid email" data-success="perfect!">Email</label>
             </div>
         </div>
@@ -25,7 +24,7 @@
                 <input type="checkbox" id="showPass" />
                 <label for="showPass">Show Password</label>
             </p>
-            <button class="btn waves-effect waves-green" type="submit" name="action">Register
+            <button class="btn waves-effect waves-green">Register
                 <i class="fa fa-user-plus left"></i>
             </button>
             <hr class="style10" />

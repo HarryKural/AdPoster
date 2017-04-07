@@ -1,3 +1,11 @@
-<h1><%= message %></h1>
-<h2><%= error.status %></h2>
-<pre><%= error.stack %></pre>
+<% include partials/header.ejs %>
+
+<blockquote>We're Sorry</blockquote>
+<div class="container">
+    <p class="flow-text">
+        Your request could not be completed.  Please try again.
+    </p>
+        <% if(err) { %><p class="flow-text"><%= err %></p><% } %>
+</div>
+
+<% include partials/footer.ejs %>
