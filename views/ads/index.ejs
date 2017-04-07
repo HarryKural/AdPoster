@@ -1,0 +1,32 @@
+<% include ../partials/header.ejs %>
+
+<blockquote>Browse Ads</blockquote>
+
+<% if (user) { %>
+<a href="/ads/add">Add a New Ad</a>
+<% } %>
+
+<table class="table table-striped table-hover">
+    <tr><th>Title</th><th>Description</th><th>Price</th>
+        <% if (user) { %>
+        <th>Actions</th>
+        <% } %>
+    </tr>
+
+    <% for (var i = 0; i < ads.length; i++) { %>
+    <tr>
+        <td><%= ads[i].title %></td>
+        <td><%= ads[i].description %></td>
+        <td><%= ads[i].price %></td>
+        <% if (user) { %>
+        <td>
+            <a href="/ads/<%= ads[i]._id %>" class="btn btn-info">Edit</a>
+            <a href="/ads/delete/<%= ads[i]._id %>" class="btn btn-danger confirmation">Delete</a>
+        </td>
+        <% } %>
+    </tr>
+    <% } %>
+
+</table>
+
+<% include ../partials/footer.ejs %>
