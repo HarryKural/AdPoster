@@ -5,17 +5,14 @@
 
     <form method="post">
         <div class="input-field col s12 l6 m6">
-            <i class="fa fa-header" aria-hidden="true"></i>
-            <input id="title" name="title" required value="<%= ad.title %>"  />
+            <input id="title" type="text" name="title" required value="<%= ad.title %>"  />
             <label for="title" id="title">Title</label>
         </div>
         <div class="input-field col s12 l6 m6">
-            <i class="fa fa-header" aria-hidden="true"></i>
-            <input id="description" name="description" required value="<%= ad.description %>"  />
+            <input id="description" type="text" name="description" required value="<%= ad.description %>"  />
             <label for="description" id="description">Description</label>
         </div>
         <div class="input-field col s12 l6 m6">
-            <i class="fa fa-header" aria-hidden="true"></i>
             <input id="price" name="price" min="0.01" type="number" step="any" value="<%= ad.price %>"  />
             <label for="price" id="price">Price</label>
         </div>

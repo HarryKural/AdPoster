@@ -20,7 +20,8 @@ router.get('/about', function (req, res, next)
 {
     res.render('about',
         {
-            title: 'About'
+            title: 'About',
+            user: req.user
         });
 });
 
@@ -29,7 +30,8 @@ router.get('/contact', function (req, res, next)
 {
     res.render('contact',
         {
-            title: 'Contact'
+            title: 'Contact',
+            user: req.user
         });
 });
 
@@ -38,7 +40,8 @@ router.get('/register', function (req, res, next)
 {
     res.render('register',
         {
-            title: 'Register'
+            title: 'Register',
+            user: req.user
         });
 });
 

@@ -14,7 +14,7 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 let ads = require('./routes/ads');
 
-var app = express();
+let app = express();
 
 // use mongoose to connect to mongodb
 let mongoose = require('mongoose');
