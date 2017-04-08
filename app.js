@@ -51,6 +51,21 @@ app.use(passport.session());
 let Account = require('./models/account');
 passport.use(Account.createStrategy());
 
+// linkedIn auth
+let LinkedInStrategy = require('passport-linkedin').Strategy;
+
+passport.use(new LinkedInStrategy({
+        consumerKey: globals.linkedin.consumerKey,
+        consumerSecret: globals.linkedin.consumerSecret,
+        callbackURL: globals.linkedin.callbackURL
+    },
+    function(token, tokenSecret, profile, done) {
+        Account.findOrCreate({ username: profile.displayName }, function (err, user) {
+            return done(err, user);
+        });
+    }
+));
+
 // mailgun -----------------   contact page ------------------
 app.post("/contact",function(req,res){
 

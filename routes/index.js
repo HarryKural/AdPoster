@@ -87,4 +87,19 @@ router.get('/logout', function(req, res, next)
     res.redirect('/');
 });
 
+/* GET LinkedIn */
+router.get('/linkedin',
+    passport.authenticate('linkedin', {
+        failureRedirect: '/login'
+    }));
+
+/* GET LinkedIn/callback */
+router.get('/linkedin/callback',
+    passport.authenticate('linkedin', { failureRedirect: '/login' }),
+    function(req, res) {
+        // Successful authentication, redirect home.
+        res.redirect('/ads');
+    });
+
+
 module.exports = router;
