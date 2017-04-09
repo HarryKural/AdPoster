@@ -100,7 +100,11 @@ blockquote {
 }
 
 /* footer */
-footer#footer {
+#footer {
+    height: 60px;
+    width: 100%;
     position: fixed;
-    bottom: 0;
+    color: #01579b;
+    bottom:0;
+    background-color: #efefef;
 }
