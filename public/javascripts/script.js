@@ -15,13 +15,9 @@ $('.button-collapse').sideNav({
 // auto resize of textarea
 $('#message').trigger('autoresize');
 
-// /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
-// function closeNav() {
-//     document.getElementById("mySidenav").style.width = "0";
-//     document.getElementById("main").style.marginLeft = "0";
-// }
 
-// ---------------- Show Password Functionality ---------------------
+// Reference: http://jsfiddle.net/herdiansc/dnznh/8/
+// ---------------- Show Password Functionality ------------
 (function ($) {
     $.toggleShowPassword = function (options) {
         var settings = $.extend({

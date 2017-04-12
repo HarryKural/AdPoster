@@ -1,17 +1,17 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
+let express = require('express');
+let path = require('path');
+let favicon = require('serve-favicon');
+let logger = require('morgan');
+let cookieParser = require('cookie-parser');
+let bodyParser = require('body-parser');
 
 // passport dependencies
 let passport = require('passport');
 let session = require('express-session');
 let localStrategy = require('passport-local').Strategy;
 
-var index = require('./routes/index');
-var users = require('./routes/users');
+let index = require('./routes/index');
+let users = require('./routes/users');
 let ads = require('./routes/ads');
 
 let app = express();
@@ -51,6 +51,9 @@ app.use(passport.session());
 let Account = require('./models/account');
 passport.use(Account.createStrategy());
 
+// Reference: https://www.npmjs.com/package/passport-linkedin
+//            https://developer.linkedin.com/
+
 // linkedIn auth
 let LinkedInStrategy = require('passport-linkedin').Strategy;
 
@@ -66,7 +69,8 @@ passport.use(new LinkedInStrategy({
     }
 ));
 
-// mailgun -----------------   contact page ------------------
+// mailgun ----------------- contact page to send email --------------------
+// Reference: https://www.youtube.com/watch?v=9RNQNwHCvSU&t=603s
 app.post("/contact",function(req,res){
 
     let api_key = 'key-cea2f6217622326ba8270360ecabe20a';

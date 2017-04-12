@@ -87,6 +87,9 @@ router.get('/logout', function(req, res, next)
     res.redirect('/');
 });
 
+/* Reference: https://developer.linkedin.com/
+ *            https://www.npmjs.com/package/passport-linkedin */
+
 /* GET LinkedIn */
 router.get('/linkedin',
     passport.authenticate('linkedin', {
